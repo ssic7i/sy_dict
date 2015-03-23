@@ -17,7 +17,7 @@ class MainWindow(QtGui.QMainWindow):
         self.ui.pushButton_translate.clicked.connect(self.check)
 
     def check(self):
-        dict_obj = dict_lib.yandex_dict(r'dict.1.1.20150322T002854Z.38fd5bd1400255a5.3fb3a505a42b20fb5b4113643d35d84ba3916d32')
+        dict_obj = dict_lib.yandex_dict(r'')
         text_in = str(unicode(self.ui.lineEdit_input.text()).encode('utf-8'))
         words = dict_obj.check_text(text_in, str(self.ui.comboBox_from.currentText()) + '-' + str(self.ui.comboBox_to.currentText()))
         self.ui.textEdit_main.clear()
